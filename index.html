@@ -15,11 +15,26 @@
     <div class="container">
       <header class="header">
         <img src="./assets/images/logo.svg" alt="Rock, Paper, Scissors logo" />
-        <div class="score-container">
-          <span class="score-label">score</span>
-          <span class="score">12</span>
+        <div class="header__score-container">
+          <span class="header__score-label">score</span>
+          <span class="header__score">12</span>
         </div>
       </header>
     </div>
+
+    <div class="modal hidden">
+      <span>rules</span>
+      <img
+        src="./assets/images/icon-close.svg"
+        alt="close button"
+        class="modal__close"
+      />
+      <img
+        src="./assets/images/image-rules.svg"
+        alt="game rules"
+        class="modal__rules"
+      />
+    </div>
+    <div class="overlay hidden"></div>
   </body>
 </html>
