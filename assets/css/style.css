@@ -132,14 +132,16 @@ body {
   justify-self: center;
 }
 
-.main--2 {
+.main--2,
+.main--3 {
   display: flex;
   align-items: center;
   gap: 10rem;
   margin-top: 10rem;
 }
 
-.main--2 div {
+.main--2 div,
+.main--3 div {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -151,8 +153,10 @@ body {
   letter-spacing: 3px;
 }
 
-.main--2 .option__container {
+.main--2 .option__container,
+.main--3 .option__container {
   scale: 1.1;
+  cursor: default;
 }
 
 .house-pick-placeholder {
