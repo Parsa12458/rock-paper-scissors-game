@@ -150,12 +150,12 @@ body {
   color: #fff;
   text-transform: uppercase;
   font-size: 1.4rem;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
 }
 
 .main--2 .option__container,
 .main--3 .option__container {
-  scale: 1.1;
+  scale: 1.15;
   cursor: default;
 }
 
@@ -166,6 +166,35 @@ body {
   border-radius: 50%;
 }
 
+.status {
+  gap: 1rem !important;
+  margin-top: 2rem;
+}
+
+.lose__title {
+  font-size: 3.8rem;
+  font-weight: 700;
+}
+
+.play-again {
+  background-color: #fff;
+  color: var(--Dark-Text);
+  border: 1px solid transparent;
+}
+
+.play-again:hover {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  transform: skewX(-20deg);
+}
+
+.winner {
+  box-shadow: 0 0 0 4rem rgba(255, 255, 255, 0.09),
+    0 0 0 8.4rem rgba(255, 255, 255, 0.06),
+    0 0 0 13rem rgba(255, 255, 255, 0.04);
+}
+
 /* -Button Styles */
 .btn {
   text-transform: uppercase;
@@ -174,6 +203,7 @@ body {
   letter-spacing: 2px;
   border-radius: 0.7rem;
   cursor: pointer;
+  transition: all 0.2s;
 }
 
 .btn--modal {
@@ -182,6 +212,12 @@ body {
   position: absolute;
   bottom: 2.5rem;
   right: 2.5rem;
+}
+
+.btn--modal:hover {
+  background-color: #fff;
+  color: var(--Dark-Text);
+  transform: skewX(-20deg);
 }
 
 /* -Modal */
