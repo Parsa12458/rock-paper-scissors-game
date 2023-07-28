@@ -171,7 +171,7 @@ body {
   margin-top: 2rem;
 }
 
-.lose__title {
+.status__title {
   font-size: 3.8rem;
   font-weight: 700;
 }
@@ -183,7 +183,7 @@ body {
 }
 
 .play-again:hover {
-  background: transparent;
+  background: rgba(255, 255, 255, 0.3);
   color: #fff;
   border: 1px solid #fff;
   transform: skewX(-20deg);
@@ -215,8 +215,8 @@ body {
 }
 
 .btn--modal:hover {
-  background-color: #fff;
-  color: var(--Dark-Text);
+  background: rgba(255, 255, 255, 0.3);
+  color: #fff;
   transform: skewX(-20deg);
 }
 
