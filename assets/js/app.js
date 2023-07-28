@@ -1,4 +1,5 @@
 import toggleModal from "./modules/modal.mjs";
+import game from "./modules/game.mjs";
 
 const controlModal = function () {
   const btnOpenModal = document.querySelector(".btn--modal");
@@ -11,6 +12,7 @@ const controlModal = function () {
 
 const init = function () {
   controlModal();
+  game();
 };
 
 init();

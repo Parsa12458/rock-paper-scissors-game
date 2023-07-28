@@ -160,10 +160,8 @@ body {
 }
 
 .house-pick-placeholder {
-  background-color: rgb(8, 8, 66);
   height: 19vh;
   aspect-ratio: 1/1;
-  border-radius: 50%;
 }
 
 .status {
@@ -193,6 +191,10 @@ body {
   box-shadow: 0 0 0 4rem rgba(255, 255, 255, 0.09),
     0 0 0 8.4rem rgba(255, 255, 255, 0.06),
     0 0 0 13rem rgba(255, 255, 255, 0.04);
+}
+
+.fade {
+  opacity: 0;
 }
 
 /* -Button Styles */
