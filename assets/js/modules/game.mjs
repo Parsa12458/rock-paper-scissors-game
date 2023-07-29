@@ -45,5 +45,70 @@ export default function () {
     ).innerHTML = `<img src="./assets/images/icon-${housePick}.svg" alt="${housePick} Image" />`;
 
     // TODO: Show lose/win page
+    setTimeout(() => {
+      const container = document.querySelector(".container");
+      main.remove();
+      const winHTML = document.createElement("div");
+      winHTML.innerHTML = `
+      <main class="main main--2">
+        <div>
+        <span class="pick-label">you picked</span>
+        <div class="user-pick option__container option--${userPick} winner">
+        <img src="./assets/images/icon-${userPick}.svg" alt="${userPick} Image" />
+        </div>
+        </div>
+        
+        <div class="status">
+        <span class="status__title">you win</span>
+        <span class="play-again btn">play again</span>
+        </div>
+        
+        <div>
+        <span class="pick-label">the house picked</span>
+        <div class="house-pick option__container option--${housePick}">
+        <img src="./assets/images/icon-${housePick}.svg" alt="${housePick} Image" />
+        </div>
+        </div>
+      </main>
+        `;
+      if (checkWin(userPick, housePick)) {
+        container.insertBefore(
+          winHTML.firstElementChild,
+          container.children[1]
+        );
+      }
+
+      const loseHTML = document.createElement("div");
+      loseHTML.innerHTML = `
+      <main class="main main--2">
+        <div>
+        <span class="pick-label">you picked</span>
+        <div class="user-pick option__container option--${userPick}">
+        <img src="./assets/images/icon-${userPick}.svg" alt="${userPick} Image" />
+        </div>
+        </div>
+        
+        <div class="status">
+        <span class="status__title">you lose</span>
+        <span class="play-again btn">play again</span>
+        </div>
+        
+        <div>
+        <span class="pick-label">the house picked</span>
+        <div class="house-pick option__container option--${housePick} winner">
+        <img src="./assets/images/icon-${housePick}.svg" alt="${housePick} Image" />
+        </div>
+        </div>
+      </main>
+        `;
+      if (!checkWin(userPick, housePick)) {
+        container.insertBefore(
+          loseHTML.firstElementChild,
+          container.children[1]
+        );
+      }
+
+      fadeIn(document.querySelector(".main"), 100);
+    }, 1000);
   });
 }
