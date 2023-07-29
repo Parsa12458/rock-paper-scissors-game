@@ -1,5 +1,6 @@
 import fadeIn from "./fadeIn.mjs";
 import checkWin from "./checkWin.mjs";
+import playAgainHandler from "./playAgainHandler.mjs";
 
 const housePickGenerate = function (userPick) {
   const options = ["rock", "paper", "scissors"];
@@ -44,7 +45,7 @@ export default function () {
       ".house-pick"
     ).innerHTML = `<img src="./assets/images/icon-${housePick}.svg" alt="${housePick} Image" />`;
 
-    // TODO: Show lose/win page
+    // Show lose/win page
     setTimeout(() => {
       const container = document.querySelector(".container");
       main.remove();
@@ -109,6 +110,11 @@ export default function () {
       }
 
       fadeIn(document.querySelector(".main"), 100);
+
+      // Handle play again button
+      const btnPlayAgain = document.querySelector(".play-again");
+      console.log(btnPlayAgain);
+      btnPlayAgain.addEventListener("click", playAgainHandler);
     }, 1000);
   });
 }
