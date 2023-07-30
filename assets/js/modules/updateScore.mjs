@@ -6,21 +6,11 @@ export const setScore = function (newScore) {
 
 export default function (status) {
   const scoreEl = document.querySelector(".header__score");
-  console.log(scoreEl);
-  if (status) {
-    ++score;
-    console.log("USER WIN! Score: ", score);
-  }
-
-  if (!status) {
-    --score;
-    console.log("HOUSE WIN Score: ", score);
-  }
+  if (status) ++score;
+  if (!status) --score;
 
   scoreEl.textContent = score;
 
-  // TODO: Store the score in local storage
+  // Store the score in local storage
   localStorage.setItem("score", score);
-
-  return score;
 }

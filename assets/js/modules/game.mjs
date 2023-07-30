@@ -10,7 +10,6 @@ const housePickGenerate = function (userPick) {
     const randomInt = Math.trunc(Math.random() * 3);
     housePick = options[randomInt];
   } while (housePick === userPick);
-  console.log(housePick);
   return housePick;
 };
 
@@ -118,7 +117,6 @@ export default function () {
 
       // Handle play again button
       const btnPlayAgain = document.querySelector(".play-again");
-      console.log(btnPlayAgain);
       btnPlayAgain.addEventListener("click", playAgainHandler);
     }, 1200);
   });
