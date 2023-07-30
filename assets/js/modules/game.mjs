@@ -1,6 +1,7 @@
 import fadeIn from "./fadeIn.mjs";
 import checkWin from "./checkWin.mjs";
 import playAgainHandler from "./playAgainHandler.mjs";
+import updateScore from "./updateScore.mjs";
 
 const housePickGenerate = function (userPick) {
   const options = ["rock", "paper", "scissors"];
@@ -109,12 +110,16 @@ export default function () {
         );
       }
 
+      // Update score
+      updateScore(checkWin(userPick, housePick));
+
+      // add fade in effect
       fadeIn(document.querySelector(".main"), 100);
 
       // Handle play again button
       const btnPlayAgain = document.querySelector(".play-again");
       console.log(btnPlayAgain);
       btnPlayAgain.addEventListener("click", playAgainHandler);
-    }, 1000);
+    }, 1200);
   });
 }

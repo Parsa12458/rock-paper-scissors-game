@@ -1,6 +1,5 @@
 import toggleModal from "./modules/modal.mjs";
 import game from "./modules/game.mjs";
-import playAgainHandler from "./modules/playAgainHandler.mjs";
 
 const controlModal = function () {
   const btnOpenModal = document.querySelector(".btn--modal");
