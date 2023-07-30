@@ -1,4 +1,9 @@
-let score = 0;
+export let score = 0;
+
+export const setScore = function (newScore) {
+  score = newScore;
+};
+
 export default function (status) {
   const scoreEl = document.querySelector(".header__score");
   console.log(scoreEl);
@@ -15,4 +20,7 @@ export default function (status) {
   scoreEl.textContent = score;
 
   // TODO: Store the score in local storage
+  localStorage.setItem("score", score);
+
+  return score;
 }
